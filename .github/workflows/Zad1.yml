@@ -1,9 +1,12 @@
-name: Hello GitHub Actions
+name: Only if src changes
 
-on: [push]
+on:
+  push:
+    paths:
+      - 'src/**'
 
 jobs:
-  say-hello:
+  run-if-src-changes:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello, GitHub Actions!"
+      - run: echo "Zmiana w src"
