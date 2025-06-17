@@ -8,4 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Make a secret API call
-        run: curl -H "Authorization: Bearer ${{ secrets.MY_SECRET }}" https://api.github.com/zen
+        run: |
+          curl -H "Authorization: Bearer ${{ secrets.MY_SECRET }}" https://api.github.com/zen
